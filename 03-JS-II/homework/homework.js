@@ -100,7 +100,7 @@ else return false;
 
 function esPrimo(numero) {
   if (numero === 0 || numero === 1) {return false;}
-  for (i = 2; i < 100 ; i ++) {if (numero / i === 1) {return true;} return false;} 
+  for (i = 2; i < numero ; i ++) {if (numero % i === 0) {return false;} return true;} 
     // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
@@ -109,17 +109,17 @@ function esPrimo(numero) {
 }
 
 function esVerdadero(valor){
-  if (valor = true) {return "Soy verdadero";} 
-  else return "Soy falso";
+  if (valor === true) {return "Soy verdadero";} 
+  return "Soy falso";
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” si su valor es true  
   //y “Soy falso” si su valor es false.
   //Escribe tu código aquí
 }
 
-function tablaDelSeis(){let result = ""; let i = -1;
-  do {i = i + 1;
-    result = 6 * i;  
-} while (i < 11); console.log(result);
+function tablaDelSeis(){var array = [];
+  for (var i = 0; i < 11; i++)
+    {array.push (6 * i);}
+    return array
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
@@ -127,7 +127,7 @@ function tablaDelSeis(){let result = ""; let i = -1;
 }
 
 function tieneTresDigitos(numero){
-  if (numero.length === 3) {return true;} return false;
+  if (numero > 99 && numero < 1000) {return true;} return false;
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   
