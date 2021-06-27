@@ -133,11 +133,11 @@ function tieneTresDigitos(numero){
   
 }
 
-function doWhile(numero) {let i = 0; let res = 0;
+function doWhile(numero) {var i = 0;
   do {
   i = i + 1;
-  res = numero + (res + 5);}
-  while (i < 8); return res;
+  numero = numero + 5;}
+  while (i < 8); return numero;
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
